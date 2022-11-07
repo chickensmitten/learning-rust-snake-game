@@ -1,11 +1,11 @@
 fn main() {
-  let message = "Hello World";
-  let message_2 = print_welcome(message);
-  println!("{}", message_2);
-}
+    let custom_num = 98_000;
+    let hex_num = 0xa;
+    let bin_num = 0b0010_1011;
+    let byte_num = b'A';
 
-fn print_welcome(text: &str) -> &str {
-  println!("{}", text);
-  let new_message = "Hi there";
-  new_message
+    println!("{}", custom_num);
+    println!("{}", hex_num);
+    println!("{}", bin_num);
+    println!("{}", byte_num);
 }
