@@ -1,5 +1,5 @@
-#Learning Snake Game
-
+# Learning Snake Game
+## Basic Setup
 - Use brew to install. Instructions here [https://stackoverflow.com/questions/67656028/rustup-gives-command-not-found-error-with-zsh-even-after-installing-with-brew](https://stackoverflow.com/questions/67656028/rustup-gives-command-not-found-error-with-zsh-even-after-installing-with-brew)
 - Execute code below to check if everything working `rustc —version`
 - Install version management `rustup default nightly`
@@ -14,3 +14,7 @@ fn main() {
 - then in project folder run code below to compile `rustc main.rs`
 - in the same directory run to run the file. `./main`
 - mut variable `let mut variable = "hellow world";` allows you to create a variable that is mutable
+
+## Run Cargo
+- `cargo init` to create a binary application package in the main directory
+- `cargo run` to compile the application
