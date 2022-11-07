@@ -1,13 +1,11 @@
 fn main() {
-  let mut message = "Hellow World";
-  println!("Some text: {}", message);
-  message = "Hi there!";
+  let message = "Hello World";
+  let message_2 = print_welcome(message);
+  println!("{}", message_2);
+}
 
-  let mut age = 10;
-  println!("Some numbers: {}", age);
-  age = 30;
-  println!("Some numbers: {}", age);
-
-  
-  println!("Some text: {}", message); // messages transported into curly brackets
+fn print_welcome(text: &str) -> &str {
+  println!("{}", text);
+  let new_message = "Hi there";
+  new_message
 }

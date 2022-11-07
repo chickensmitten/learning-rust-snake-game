@@ -18,3 +18,8 @@ fn main() {
 ## Run Cargo
 - `cargo init` to create a binary application package in the main directory
 - `cargo run` to compile the application
+
+## Rust Analyzer
+- use rust analyzer in VS code to better read Rust code.
+- there is a difference between `str` and `String` in Rust code.
+
