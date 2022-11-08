@@ -1,18 +1,15 @@
 fn main() {
-    let float_num: f32 = 3.14;
-    let float_num_2: f64 = 3.2334327489;
+    // you can place on stack only values with static size
+    let a = 10;
+    let b = a;
+    let c = 15;
+    let d = add(a, b);
 
-    let tup: (i32, &str, u8) = (20, "Hello", 1);
+    let message = String::from("Hello");
+    println!("{}", message);
+}
 
-    println!("{}", tup.1);
-
-    let (a, b, c) = tup;
-    println!("{}", a);
-
-    let x = [1, 5, 6, 7];
-
-    println!("{}", x[2]);
-
-    let y = [2; 6]; // [2, 2, 2, 2, 2, 2]
-    println!("{}", y[5]);
+fn add(x: u32, y: u32) -> u32 {
+    let sum = x + y;
+    sum
 }
