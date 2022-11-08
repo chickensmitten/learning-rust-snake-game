@@ -92,3 +92,11 @@ fn main() {
     println!("{}", y[5]);
 }
 ```
+## Return Value with Arrow ->
+```
+fn add(x: u32, y: u32) -> u32 {
+    let sum = x + y;
+    sum
+}
+```
+Without `-> u32`, cannot return `sum`
