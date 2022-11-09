@@ -1,4 +1,9 @@
-# Learning Snake Game
+# Learning Rust
+## General Thoughts
+The language is strict on the following:
+- ordering: creating and consuming variables should be in a certain order, else there will be errors
+- types: declaration of types are needed for memory management
+
 ## Basic Setup
 - Use brew to install. Instructions here [https://stackoverflow.com/questions/67656028/rustup-gives-command-not-found-error-with-zsh-even-after-installing-with-brew](https://stackoverflow.com/questions/67656028/rustup-gives-command-not-found-error-with-zsh-even-after-installing-with-brew)
 - Execute code below to check if everything working `rustc —version`
@@ -92,11 +97,60 @@ fn main() {
     println!("{}", y[5]);
 }
 ```
-## Return Value with Arrow ->
+## More Explanations
+### Return Value with Arrow ->
+Without `-> u32`, cannot return `sum`
 ```
 fn add(x: u32, y: u32) -> u32 {
     let sum = x + y;
     sum
 }
 ```
-Without `-> u32`, cannot return `sum`
+
+## References
+`&` sign is used to create references
+```
+fn main() {
+     let message = String::from("Hello");
+     let message_2: &String = &message; // type is &String and not str
+     // message_2 is not owner of data
+     // message_2 is "borrowing" a reference to message
+
+     println!("{}", message);
+     println!("{}", message_2);
+ }
+ // message and message_2 going out of the scope
+ // message_2 is not dropped because it doesn't have ownership of what it refers to
+ // message is dropped
+```
+
+### Mutable references
+```
+fn main() {
+     let mut message = String::from("Hello");
+     let message_2: &mut String = &mut message;
+     // message_2 is not owner of data
+     // message_2 is "borrowing" a reference to message
+
+     message_2.push_str(" World");
+
+     println!("{}", message_2);
+     println!("{}", message);
+ }
+```
+
+### Dereference
+using asteriks `*` to dereference. there more references with ampersand, the more `*` is required.
+
+```
+fn main() {
+     let a = 10;
+     let b = &a;
+     let c = &b;
+
+     println!("{}", a == **c);
+ }
+```
+
+
+
