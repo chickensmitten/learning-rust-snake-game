@@ -137,7 +137,7 @@ fn add(x: u32, y: u32) -> u32 {
 }
 ```
 
-## References
+### References
 `&` sign is used to create references
 ```
 fn main() {
@@ -182,7 +182,7 @@ fn main() {
  }
 ```
 
-## Box, Structs, Constructors
+### Box, Structs, Constructors
 - creating a box `Box::new(<value>)`
 - creating structs and methods. use `impl` as an associated function for the structs
 ```
@@ -273,7 +273,7 @@ fn main() {
 }
 ```
 
-## ENUM
+### ENUM
 - values and match. Match is used for pattern matching.
 ```
 #[derive(Debug)]
@@ -360,7 +360,7 @@ fn check_person_id(id: PersonId) {
 }
 ```
 
-## Trait
+### Trait
 - creating trait and trait narrowing
 ```
 trait Log {
@@ -449,3 +449,6 @@ fn log_info_2(val: &dyn Log) {
     val.alert_something();
 }
 ```
+## Modularity
+### pub
+- use `pb struct Person { ... }` to allow calling `use <project name>::Person;`
