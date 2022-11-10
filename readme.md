@@ -458,3 +458,4 @@ fn log_info_2(val: &dyn Log) {
 ### modules
 - use `pub mod learning-rust { ... fn ... }` put all functions into the public modules
 - call public modules with `snake_game::learning_rust::{ ... fn ...}`
+- can call module within modules
