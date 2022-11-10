@@ -450,5 +450,8 @@ fn log_info_2(val: &dyn Log) {
 }
 ```
 ## Modularity
-### pub
+### import pub
 - use `pb struct Person { ... }` to allow calling `use <project name>::Person;`
+- use `use snake_game::*;` to import everything
+- use `use snake_game::{ Person, Animal, log_info, log_info_2 };`, a different way to import
+
