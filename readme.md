@@ -455,3 +455,6 @@ fn log_info_2(val: &dyn Log) {
 - use `use snake_game::*;` to import everything
 - use `use snake_game::{ Person, Animal, log_info, log_info_2 };`, a different way to import
 
+### modules
+- use `pub mod learning-rust { ... fn ... }` put all functions into the public modules
+- call public modules with `snake_game::learning_rust::{ ... fn ...}`
