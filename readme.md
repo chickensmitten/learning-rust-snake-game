@@ -462,3 +462,19 @@ fn log_info_2(val: &dyn Log) {
 - can make fields public `pub fn <name>`
 - using `super::super::<method>` to go outside twice to access a function `fn`
 - when calling an external file, use `mod <external file name>` or `use <external file name>::<mod in external file>`. `use` allows you to then call the `fn` in the external file while using `crate` will allow you to call the `mod` file
+- to display, use `std::fmt::Display`
+```
+use std::fmt;
+impl fmt::Display for PersonId {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            PersonId::Passport(x) => {
+                write!(f, "MY PASSPORT : {}", x)
+            },
+            PersonId::IndentityCard(x, y, z) => {
+                write!(f, "This is my ID: ----> {} {} {} <-----", x, y, z)
+            }
+        }
+    }
+}
+```
