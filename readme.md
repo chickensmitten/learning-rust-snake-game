@@ -478,3 +478,9 @@ impl fmt::Display for PersonId {
     }
 }
 ```
+# Web Assembly
+- we need to compile Rust to WebAssembly code
+- WebAssembly can be executed in the browser
+- it runs at native speed
+- 3d apps, cad, virtual reality, system application, games
+- URL to webassembly demo: [https://webassembly.github.io/wabt/demo/wat2wasm/](https://webassembly.github.io/wabt/demo/wat2wasm/)
