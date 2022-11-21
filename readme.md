@@ -1,4 +1,11 @@
-# Learning Rust
+# Learning Rust with a Snake game and WebAssembly
+
+## Setup WASM
+- Refer to Udemy PackWebAssembly `cargo install wasm-pack`
+- run `wasm-pack build --target web` in main directory whenever `Cargo.toml` changes
+- add `"snake_game": "file:../pkg"` to your www/package.json, then run `npm install` in wwww folder
+- pro tip: go to `http://localhost:8080/webpack-dev-server` to see the npm asset directory
+
 ## General Thoughts
 The language is strict on the following:
 - ordering: creating and consuming variables should be in a certain order, else there will be errors
